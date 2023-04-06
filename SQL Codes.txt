@@ -1,0 +1,13 @@
+CREATE TABLE `student_management`.`admin` (`Administrator_ID` INT NOT NULL AUTO_INCREMENT , `Fullname` TEXT NOT NULL , `Email_Address` TEXT NOT NULL , `Password` TEXT NOT NULL , PRIMARY KEY (`Administrator_ID`), UNIQUE (`Email_Address`)) ENGINE = InnoDB;
+
+CREATE TABLE `student_management`.`student` (`Student_ID` INT NOT NULL AUTO_INCREMENT , `Fullname` TEXT NOT NULL , `Email_Address` TEXT NOT NULL , `Password` TEXT NOT NULL , PRIMARY KEY (`Student_ID`), UNIQUE (`Email_Address`)) ENGINE = InnoDB;
+
+CREATE TABLE `grades` (
+  `Grade_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Student_ID` int(11) NOT NULL,
+  `Subject` text NOT NULL,
+  `Marks` int(11) NOT NULL,
+  PRIMARY KEY (`Grade_ID`)
+) ENGINE=InnoDB;
+
+INSERT INTO `admin`(`Administrator_ID`, `Fullname`, `Email_Address`, `Password`) VALUES ('NULL','John Doe','john.doe@gmail.com',md5('12345678'));
